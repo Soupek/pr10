@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.CheckBox
 import android.widget.EditText
 
-const val TABLE="TABLE"
+const val TABLE="TABLEE"
 const val CHECKK = "KEY4"
 class MainActivity : AppCompatActivity() {
     var preff: SharedPreferences?=null
@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         mail = findViewById(R.id.mail)
         pass = findViewById(R.id.pass)
         check = findViewById(R.id.checkBox)
-        preff = getSharedPreferences("TABLEE", MODE_PRIVATE)
+        preff = getSharedPreferences(TABLE, MODE_PRIVATE)
         check.isChecked=preff?.getBoolean("key3", false)?:false
         mail.setText(preff?.getString(CHECKK, ""))
         pass.setText(preff?.getString("key2", ""))
